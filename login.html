@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (isset($_SESSION['account_id'])) header("location: index.php");
+if (isset($_SESSION['student_id'])) header("location: index.php");
 
 ?>
 <!DOCTYPE html>
@@ -52,8 +52,7 @@ if (isset($_SESSION['account_id'])) header("location: index.php");
         	<div class="card-box">
             <div class="panel-heading" style="text-align: center;">
 				<strong class="text-custom"></strong>
-                <img class="img-circle" src="images/lu_seal.png" alt="PLGU Logo">
-				<h4>E-Socio Economic Profiling in La Union</h4>
+				<h2>Students Information System</h2>
             </div>
 			<!-- Box or body -->
             <div class="panel-body">
@@ -64,13 +63,13 @@ if (isset($_SESSION['account_id'])) header("location: index.php");
 			<!-- Username -->
 			<div class="input-group form-group col-xs-12">
 				<span class="input-group-addon"><i class="fa fa-user"></i></span>
-					<input type="text" ng-model="account.account_username" class="form-control" placeholder="Username">
+					<input type="text" ng-model="account.student_username" class="form-control" placeholder="Username">
 			</div>
 			
 			<!-- Password -->
 			<div class="input-group form-group col-xs-12">
 				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-					<input type="password" ng-model="account.account_password" class="form-control" placeholder="Password">
+					<input type="password" ng-model="account.student_password" class="form-control" placeholder="Password">
 			</div>
 			
 			<!-- Show if invalid or valid -->

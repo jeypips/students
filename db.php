@@ -23,7 +23,7 @@ class pdo_db {
 	function __construct($table = "") {
 		
 		$server = "localhost";
-		$db_name = "esocio";
+		$db_name = "students";
 		$dsn = "mysql:host=$server;dbname=$db_name;charset=utf8";
 		$username = "root";
 		$password = "root";

@@ -1,6 +1,6 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['account_id'])) header("location: login.html");
+if (!isset($_SESSION['student_id'])) header("location: login.html");
 
 ?>

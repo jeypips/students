@@ -10,7 +10,7 @@ $con = new pdo_db();
 
 $profile = [];
 
-$sql = "SELECT account_id, CONCAT(account_firstname, ' ', account_lastname) fullname FROM account_info WHERE account_id = $_SESSION[account_id]";
+$sql = "SELECT student_id, CONCAT(student_firstname, ' ', student_lastname) fullname FROM student_info WHERE student_id = $_SESSION[student_id]";
 
 $staff = $con->getData($sql);
 
@@ -19,7 +19,7 @@ $profile['fullname'] = $staff[0]['fullname'];
 $dir = "pictures/";
 $avatar = $dir."avatar.png";
 
-$picture = $dir.$staff[0]['account_id'].".jpg";
+$picture = $dir.$staff[0]['student_id'].".jpg";
 if (!file_exists("../".$picture)) $picture = $avatar;
 
 $profile['picture'] = $picture;
