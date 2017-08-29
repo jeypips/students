@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 29, 2017 at 02:36 PM
+-- Generation Time: Aug 29, 2017 at 04:50 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -35,8 +35,8 @@ CREATE TABLE `student_info` (
   `student_address` varchar(100) DEFAULT NULL,
   `student_username` varchar(50) DEFAULT NULL,
   `student_password` varchar(50) DEFAULT NULL,
-  `student_contact` int(50) DEFAULT NULL,
-  `student_grade` int(11) DEFAULT NULL
+  `student_contact` varchar(50) DEFAULT NULL,
+  `student_grade` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -44,8 +44,8 @@ CREATE TABLE `student_info` (
 --
 
 INSERT INTO `student_info` (`student_id`, `student_no`, `student_firstname`, `student_middlename`, `student_lastname`, `student_address`, `student_username`, `student_password`, `student_contact`, `student_grade`) VALUES
-(1, 1, 'John Paul', 'Garcia', 'Balanon', 'SFC', 'admin', 'admin', 4, 1),
-(2, NULL, 'Dexter', 'Rivera', 'Florendo', 'SFC', NULL, NULL, 94484848, 1);
+(1, 1, 'Juan', 'De', 'La Cruz', 'SFC', 'admin', 'admin', '09999999999', '1'),
+(2, NULL, 'Allen Jayson', 'De', 'Florendo', 'SFC', NULL, NULL, '09999999999', '1');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `student_info`
 -- AUTO_INCREMENT for table `student_info`
 --
 ALTER TABLE `student_info`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
