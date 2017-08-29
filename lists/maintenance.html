@@ -1,0 +1,25 @@
+<div class="row">
+	<button class="btn btn-primary waves-effect waves-light pull-left" ng-click="manage.sector(this)">Add</button>
+</div>
+<hr>
+	<div class="panel-body">
+	<table id="maintenance" class="table table-striped m-0">
+	  <thead>
+		<tr>
+				  <th>No.</th>
+				  <th>Sector Description</th>
+				  <th>&nbsp;</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr ng-repeat="sector in sectors">
+		  <td>{{sector.sector_id}}</td>
+		  <td>{{sector.sector_description}}</td>
+		  <td>
+		  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="manage.sector(this,sector)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+		  <button class="btn btn-sm btn-default" ng-click="manage.delete(this,sector)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+		  </td>
+		</tr>
+	  </tbody>
+	</table>
+	</div>

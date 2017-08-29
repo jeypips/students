@@ -1,0 +1,43 @@
+<div class="panel panel-border panel-primary">
+		<div class="panel-heading">
+			<h4><i class="icon-layers"></i> Physical Characteristics<button class="btn btn-primary pull-right" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button></h4>
+		</div>
+		<hr>
+		<div class="row">
+	<div class="col-lg-12">
+		<div class="card-box">
+			<form name="formHolder.macros" id="formHolder.macros">
+			<div class="row">
+				
+				<div class="col-lg-5 form-group" ng-class="{'has-error': formHolder.macros.pc_land_area.$touched && formHolder.macros.pc_land_area.$invalid}">
+					<label class="label-control">Land Area</label>
+					<input type="text" class="form-control" name="pc_land_area" ng-model="macros.pc_land_area" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.macros.pc_land_area.$touched && formHolder.macros.pc_land_area.$invalid">Land Area is required</span>
+				</div>
+				<div class="col-lg-2 form-group" ng-class="{'has-error': formHolder.macros.pc_no_barangay.$touched && formHolder.macros.pc_no_barangay.$invalid}">
+					<label class="label-control">No. of Brgy</label>
+					<input type="number" class="form-control" name="pc_no_barangay" ng-model="macros.pc_no_barangay" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.macros.pc_no_barangay.$touched && formHolder.macros.pc_no_barangay.$invalid">No. of Brgy is required</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-5 form-group">
+					<label class="label-control">Terrain</label>
+					<input type="text" class="form-control" name="pc_terrain" ng-model="macros.pc_terrain" ng-disabled="controls.ok.btn">
+				</div>
+				<div class="col-lg-7 form-group">
+					<label class="label-control">Climate</label>
+					<input type="text" class="form-control" name="pc_climate" ng-model="macros.pc_climate" ng-disabled="controls.ok.btn">
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group text-left m-b-0">
+					<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="form.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+					<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+				</div>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>

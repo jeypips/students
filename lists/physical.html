@@ -1,0 +1,33 @@
+<div class="panel panel-border panel-primary">
+		<div class="panel-heading">
+			<h4><i class="icon-layers"></i> Physical Characteristics<button class="btn btn-primary waves-effect waves-light pull-right" ng-click="form.physical(this)">Add</button></h4>
+			<hr>
+		</div>
+	<div class="panel-body">
+		<table id="physical" class="table table-striped m-0">
+		  <thead>
+			<tr>
+					  <th>#</th>
+					  <th>Land Area</th>
+					  <th>Terrain</th>
+					  <th>Climate</th>
+					  <th>No. of brgy</th>
+					  <th>&nbsp;</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="macro in macros track by $index">
+			  <td>{{macro.macros_id}}</td>
+			  <td>{{macro.pc_land_area}}</td>
+			  <td>{{macro.pc_terrain}}</td>
+			  <td>{{macro.pc_climate}}</td>
+			  <td>{{macro.pc_no_barangay}}</td>
+			  <td>
+			  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="form.physical(this,macro)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+			  <button class="btn btn-sm btn-default" ng-click="form.delete(this,macro)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div>

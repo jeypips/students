@@ -1,0 +1,28 @@
+<div class="row">
+<button class="btn btn-primary pull-right" ng-click="paramItem.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+</div>
+<hr>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="card-box">
+			<form name="formHolder.parameter_items" id="formHolder.parameter_items">
+			<div class="row">
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid}">
+					<label class="label-control">Parameter Description</label>
+					<select class="form-control" name="parameters_items.item_parameter" ng-model="parameter_items.item_parameter" ng-options="par.parameter_name for par in parameters_add track by par.parameter_id" required ng-disabled="controls.ok.btn"></select>
+					<span class="help-block" ng-show="formHolder.parameter_items.item_parameter.$touched && formHolder.parameter_items.item_parameter.$invalid">Parameter Name is required</span>
+				</div>
+				<div class="col-lg-6 col-md-9 col-sm-12 form-group" ng-class="{'has-error': formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid}">
+					<label class="label-control">Name of Attribute</label>
+					<input type="text" class="form-control" name="item_attribute" ng-model="parameter_items.item_attribute" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.parameter_items.item_attribute.$touched && formHolder.parameter_items.item_attribute.$invalid">Name is required</span>
+				</div>
+			</div>
+			<div class="form-group text-left m-b-0">
+				<button class="btn btn-primary waves-effect waves-light" type="submit" ng-click="paramItem.list(this)" ng-disabled="controls.cancel.btn">{{controls.cancel.label}}</button>
+				<button class="btn btn-default waves-effect waves-light m-l-5" ng-click="paramItem.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
