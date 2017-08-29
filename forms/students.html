@@ -1,46 +1,48 @@
 <div class="row">
 <button class="btn btn-primary pull-right" ng-click="manage.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
-</div>
+<h2>
+<i class="fa fa-user"></i>Student Information</h2>
+<div>
 <hr>
 <div class="row">
 	<div class="col-lg-12">
 		<div class="card-box">
-			<form name="formHolder.sectors" id="formHolder.sectors">
+			<form name="formHolder.students" id="formHolder.students">
 			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid}">
+				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.students.student_description.$touched && formHolder.students.student_description.$invalid}">
 					<label class="label-control">First Name</label>
-					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">First Name is required</span>
+					<input type="text" class="form-control" name="student_firstname" ng-model="students.student_firstname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.students.student_firstname.$touched && formHolder.students.student_firstname.$invalid">First Name is required</span>
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid}">
+				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.students.student_description.$touched && formHolder.students.student_description.$invalid}">
 					<label class="label-control">Middle Name</label>
-					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">Middle Name is required</span>
+					<input type="text" class="form-control" name="student_middlename" ng-model="students.student_middlename" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.students.student_middlename.$touched && formHolder.students.student_middlename.$invalid">Middle Name is required</span>
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid}">
+				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.students.student_description.$touched && formHolder.students.student_description.$invalid}">
 					<label class="label-control">Last Name</label>
-					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">Last Name is required</span>
+					<input type="text" class="form-control" name="student_lastname" ng-model="students.student_lastname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.students.student_lastname.$touched && formHolder.students.student_lastname.$invalid">Last Name is required</span>
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 form-group" ng-class="{'has-error': formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid}">
+			<div class="col-lg-12 col-md-12 col-sm-12 form-group" ng-class="{'has-error': formHolder.students.student_description.$touched && formHolder.students.student_description.$invalid}">
 					<label class="label-control">Address</label>
-					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">Address is required</span>
+					<input type="text" class="form-control" name="student_address" ng-model="students.student_address" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.students.student_address.$touched && formHolder.students.student_address.$invalid">Address is required</span>
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid}">
+			<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.students.student_description.$touched && formHolder.students.student_description.$invalid}">
 					<label class="label-control">Contact Number</label>
-					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">Contact Number is required</span>
+					<input type="text" class="form-control" name="student_contact" ng-model="students.student_contact" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.students.student_contact.$touched && formHolder.students.student_contact.$invalid">Contact Number is required</span>
 				</div>
 			
-			<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid}">
+			<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.students.student_description.$touched && formHolder.students.student_description.$invalid}">
 					<label class="label-control">Grade</label>
-					<input type="text" class="form-control" name="sector_description" ng-model="sectors.sector_description" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.sectors.sector_description.$touched && formHolder.sectors.sector_description.$invalid">Grade is required</span>
+					<input type="text" class="form-control" name="student_grade" ng-model="students.student_grade" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.students.student_grade.$touched && formHolder.students.student_gradelid">Grade is required</span>
 				</div>
 			</div>
 				<div class="form-group text-left m-b-0">
