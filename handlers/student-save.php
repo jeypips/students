@@ -6,13 +6,13 @@ include_once '../db.php';
 
 $con = new pdo_db("student_info");
 
-if ($_POST['student_info']['student_id']) {
+if ($_POST['student']['student_id']) {
 	
-	$student_info = $con->updateData($_POST['student_info'],'student_id');
+	$student = $con->updateData($_POST['student'],'student_id');
 	
 } else {
 	
-	$student_info = $con->insertData($_POST['student_info']);
+	$student = $con->insertData($_POST['student']);
 	echo $con->insertId;
 
 }

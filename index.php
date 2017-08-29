@@ -7,12 +7,15 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="images/lu_seal.png">
+        <link rel="shortcut icon" href="images/student-icon.png">
 
-        <title>E-Socio | Dashboard</title>
+        <title>Student | Lists</title>
 
         <!--Morris Chart CSS -->
 		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+		 
+		<!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -31,7 +34,7 @@
         <script src="assets/js/modernizr.min.js"></script>
 		<style type="text/css">
         .img-circle {
-			width: 50px;			
+			width: 40px;			
 		}
 		
 		</style>
@@ -48,7 +51,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><span> STUDENT</span></a>
+                        <a href="index.php" class="logo"><img class="img-circle" src="images/student-icon.png" alt="Student Logo"><span> STUDENT</span></a>
                     </div>
                 </div>
 
@@ -70,7 +73,6 @@
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Setting</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
@@ -118,11 +120,7 @@
 						
 						<div class="row">
 							<div class="col-lg-12">
-								<div class="row">
-									<div class="col-lg-12">
-										<div id="x_content" class="x_content"></div>
-									</div>
-								</div>
+								<div id="x_content" class="x_content"></div>
 							</div>
 						</div>
                     </div> <!-- container -->
@@ -158,6 +156,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>

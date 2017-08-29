@@ -17,16 +17,12 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 					btn: false,
 					label: 'Cancel'
 				},
-				add: {
-					btn: false,
-					label: 'Add'
-				},
-			};
+			};			
 
 			scope.student = {};
 			scope.student.student_id = 0;
 
-			scope.student = []; // list
+			scope.students = []; // list
 
 		};
 
@@ -39,17 +35,12 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-
 			return scope.formHolder.student.$invalid;
 			
-		};			
+		};
 		
-
 		self.student = function(scope,row) {			
-			
-			scope.controls.add.label = 'List';	// changed value
-			scope.controls.add.btn = true;
-			
+		
 			scope.student = {};
 			scope.student.student_id = 0;
 
@@ -69,9 +60,8 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 				scope.controls.ok.btn = true;
 				scope.controls.cancel.label = 'Close';
 				scope.controls.cancel.btn = false;
-
-				if (scope.$student_id> 2) scope = scope.$parent;				
-
+				
+				if (scope.$id > 2) scope = scope.$parent;				
 				$http({
 				  method: 'POST',
 				  url: 'handlers/student-view.php',
@@ -86,6 +76,7 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 					
 				});					
 			};
+			
 		};
 		
 		
@@ -103,10 +94,9 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 			  method: 'POST',
 			  url: 'handlers/student-save.php',
 			  data: {student: scope.student}
-			}).then(function mySucces(response) {
+			}).then(function mySucces(response) {					
 				
 				if (scope.student.student_id == 0) scope.student.student_id = response.data;
-
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -142,13 +132,13 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 
 		bootstrapModal.confirm(scope,'Confirmation','Are you sure you want to delete this record?',onOk,function() {});
 			
-		};
+		};		
 		
 		
 		self.list = function(scope) {
 			
 			// load list
-			scope.mode = 'list';
+			
 			scope.student = {};
 			scope.student.student_id = 0;			
 			$http({
@@ -176,7 +166,6 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 				},200);
 				
 			});
-
 		};
 	};
 	
