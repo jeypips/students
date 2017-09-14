@@ -1,0 +1,22 @@
+<!-- bootbox, taking picture html -->
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="profile_img">
+		<div id="crop-avatar">
+			<video id="video" class="img-responsive avatar-view">Video stream not available.</video>	
+		</div>
+	</div>			
+	<hr>
+	<div style="text-align: center;">	
+		<button class="btn btn-success btn-xs" ng-click="snapshot.take(this)">Take Photo</button>
+		<button class="btn btn-danger btn-xs" ng-click="snapshot.clear(this)">Clear</button>
+	</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="profile_img">
+		<div id="crop-avatar">
+			<canvas id="canvas" class="img-responsive avatar-view"></canvas>
+		</div>
+	</div>
+</div>
+</div>

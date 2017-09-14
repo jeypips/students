@@ -8,6 +8,12 @@
 		<div class="card-box">
 			<form name="formHolder.student_info" id="formHolder.student_info">
 			<div class="row">
+			<div class="col-sm-4">
+				<img src="pictures/avatar.png" alt="image" id="front_picture" class="img-responsive img-rounded" width="100"/>
+				<button class="btn btn-primary" ng-click="snapshot.start(this,'front')">Add</button>
+			</div>
+			</div>
+			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.student_info.student_firstname.$touched && formHolder.student_info.student_firstname.$invalid}">
 					<label class="label-control">First Name</label>
 					<input type="text" class="form-control" name="student_firstname" ng-model="student_info.student_firstname" required ng-disabled="controls.ok.btn">

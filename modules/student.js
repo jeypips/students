@@ -1,4 +1,4 @@
-angular.module('students-module',['bootstrap-modal']).factory('form', function($compile,$timeout,$http,bootstrapModal) {
+angular.module('students-module',['bootstrap-modal','snapshot-module']).factory('form', function($compile,$timeout,$http,bootstrapModal,snapshot) {
 	
 	function form() {
 		
@@ -7,6 +7,8 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 		var loading = '<div class="col-sm-offset-4 col-sm-8"><button type="button" class="btn btn-inverse" title="Loading" disabled><i class="fa fa-spin fa-refresh"></i>&nbsp; Please wait...</button></div>';
 		
 		self.data = function(scope) { // initialize data	
+		
+		scope.snapshot = snapshot;
 		
 			scope.controls = {
 				ok: {
@@ -70,6 +72,13 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 					
 					angular.copy(response.data, scope.student_info);
 					
+					angular.forEach(scope.pictures, function(item,i) { console.log(i);
+						var photo = 'pictures/'+scope.student_info.student_id+'_'+i+'.png';
+						var view = document.getElementById(i+'_picture');
+						if (imageExists(photo)) view.setAttribute('src', photo);
+						else view.setAttribute('src', 'pictures/avatar.png');
+					});
+					
 				}, function myError(response) {
 					 
 				  // error
@@ -97,6 +106,7 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 			}).then(function mySucces(response) {					
 				
 				if (scope.student_info.student_id == 0) scope.student_info.student_id = response.data;
+				snapshot.upload(scope);
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -166,6 +176,17 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 				},200);
 				
 			});
+		};
+		
+		function imageExists(image_url){
+
+			var http = new XMLHttpRequest();
+
+			http.open('HEAD', image_url, false);
+			http.send();
+
+			return http.status != 404;
+
 		};
 	};
 	
