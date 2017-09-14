@@ -176,7 +176,7 @@
 		<script src="modules/fullscreen.js"></script>
 		<script src="modules/bootstrap-modal.js"></script>
 		<script src="modules/account.js"></script>
-		<script src="modules/students.js"></script>
+		<script src="modules/student.js"></script>
 		<script src="controllers/student.js"></script>
 
 

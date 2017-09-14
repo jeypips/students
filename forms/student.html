@@ -6,42 +6,42 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="card-box">
-			<form name="formHolder.student" id="formHolder.student">
+			<form name="formHolder.student_info" id="formHolder.student_info">
 			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.student.student_firstname.$touched && formHolder.student.student_firstname.$invalid}">
+				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.student_info.student_firstname.$touched && formHolder.student_info.student_firstname.$invalid}">
 					<label class="label-control">First Name</label>
-					<input type="text" class="form-control" name="student_firstname" ng-model="student.student_firstname" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.student.student_firstname.$touched && formHolder.student.student_firstname.$invalid">First Name is required</span>
+					<input type="text" class="form-control" name="student_firstname" ng-model="student_info.student_firstname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.student_info.student_firstname.$touched && formHolder.student_info.student_firstname.$invalid">First Name is required</span>
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.student.student_middlename.$touched && formHolder.student.student_middlename.$invalid}">
+				<div class="col-lg-4 col-md-4 col-sm-12 form-group" ng-class="{'has-error': formHolder.student_info.student_middlename.$touched && formHolder.student_info.student_middlename.$invalid}">
 					<label class="label-control">Middle Name</label>
-					<input type="text" class="form-control" name="student_middlename" ng-model="student.student_middlename" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.student.student_middlename.$touched && formHolder.student.student_middlename.$invalid">Middle Name is required</span>
+					<input type="text" class="form-control" name="student_middlename" ng-model="student_info.student_middlename" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.student_info.student_middlename.$touched && formHolder.student_info.student_middlename.$invalid">Middle Name is required</span>
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.student.student_lastname.$touched && formHolder.student.student_lastname.$invalid}">
+				<div class="col-lg-4 col-md-4 col-sm-4 form-group" ng-class="{'has-error': formHolder.student_info.student_lastname.$touched && formHolder.student_info.student_lastname.$invalid}">
 					<label class="label-control">Last Name</label>
-					<input type="text" class="form-control" name="student_lastname" ng-model="student.student_lastname" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.student.student_lastname.$touched && formHolder.student.student_lastname.$invalid">Last Name is required</span>
+					<input type="text" class="form-control" name="student_lastname" ng-model="student_info.student_lastname" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.student_info.student_lastname.$touched && formHolder.student_info.student_lastname.$invalid">Last Name is required</span>
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 form-group" ng-class="{'has-error': formHolder.student.student_address.$touched && formHolder.student.student_address.$invalid}">
+			<div class="col-lg-12 col-md-12 col-sm-12 form-group" ng-class="{'has-error': formHolder.student_info.student_address.$touched && formHolder.student_info.student_address.$invalid}">
 					<label class="label-control">Address</label>
-					<input type="text" class="form-control" name="student_address" ng-model="student.student_address" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.student.student_address.$touched && formHolder.student.student_address.$invalid">Address is required</span>
+					<input type="text" class="form-control" name="student_address" ng-model="student_info.student_address" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.student_info.student_address.$touched && formHolder.student_info.student_address.$invalid">Address is required</span>
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.student.student_contact.$touched && formHolder.student.student_contact.$invalid}">
+			<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.student_info.student_contact.$touched && formHolder.student_info.student_contact.$invalid}">
 					<label class="label-control">Contact Number</label>
-					<input type="text" class="form-control" name="student_contact" ng-model="student.student_contact" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.student.student_contact.$touched && formHolder.student.student_contact.$invalid">Contact Number is required</span>
+					<input type="text" class="form-control" name="student_contact" ng-model="student_info.student_contact" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.student_info.student_contact.$touched && formHolder.student_info.student_contact.$invalid">Contact Number is required</span>
 				</div>
 				
-				<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.student.student_grade.$touched && formHolder.student.student_grade.$invalid}">
+				<div class="col-lg-6 col-md-6 col-sm-6 form-group" ng-class="{'has-error': formHolder.student_info.student_grade.$touched && formHolder.student_info.student_grade.$invalid}">
 					<label class="label-control">Grade</label>
-					<input type="text" class="form-control" name="student_grade" ng-model="student.student_grade" required ng-disabled="controls.ok.btn">
-					<span class="help-block" ng-show="formHolder.student.student_grade.$touched && formHolder.student.student_grade.$invalid">Grade is required</span>
+					<input type="text" class="form-control" name="student_grade" ng-model="student_info.student_grade" required ng-disabled="controls.ok.btn">
+					<span class="help-block" ng-show="formHolder.student_info.student_grade.$touched && formHolder.student_info.student_grade.$invalid">Grade is required</span>
 				</div>
 			</div>
 				<div class="form-group text-left m-b-0">

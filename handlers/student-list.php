@@ -8,8 +8,8 @@ session_start();
 
 $con = new pdo_db();
 
-$students = $con->getData("SELECT * FROM student_info");
+$student_infos = $con->getData("SELECT * FROM student_info");
 
-echo json_encode($students);
+echo json_encode($student_infos);
 
 ?>

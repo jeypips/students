@@ -16,15 +16,15 @@
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr ng-repeat="student in students">
-			  <td>{{student.student_id}}</td>
-			  <td>{{student.student_firstname}} {{student.student_middlename}} {{student.student_lastname}}</td>
-			  <td>{{student.student_address}}</td>
-			  <td>{{student.student_contact}}</td>
-			  <td>{{student.student_grade}}</td>
+			<tr ng-repeat="student_info in student_infos">
+			  <td>{{student_info.student_id}}</td>
+			  <td>{{student_info.student_firstname}} {{student_info.student_middlename}} {{student_info.student_lastname}}</td>
+			  <td>{{student_info.student_address}}</td>
+			  <td>{{student_info.student_contact}}</td>
+			  <td>{{student_info.student_grade}}</td>
 			  <td>
-			  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="form.student(this,student)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
-			  <button class="btn btn-sm btn-default" ng-click="form.delete(this,student)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+			  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="form.student(this,student_info)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+			  <button class="btn btn-sm btn-default" ng-click="form.delete(this,student_info)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
 			  </td>
 			</tr>
 		  </tbody>

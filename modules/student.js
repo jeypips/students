@@ -19,30 +19,30 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 				},
 			};			
 
-			scope.student = {};
-			scope.student.student_id = 0;
+			scope.student_info = {};
+			scope.student_info.student_id = 0;
 
-			scope.students = []; // list
+			scope.student_infos = []; // list
 
 		};
 
 		function validate(scope) {
 			
-			var controls = scope.formHolder.student.$$controls;
+			var controls = scope.formHolder.student_info.$$controls;
 			
 			angular.forEach(controls,function(elem,i) {
 				
 				if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;
 									
 			});
-			return scope.formHolder.student.$invalid;
+			return scope.formHolder.student_info.$invalid;
 			
 		};
 		
 		self.student = function(scope,row) {			
 		
-			scope.student = {};
-			scope.student.student_id = 0;
+			scope.student_info = {};
+			scope.student_info.student_id = 0;
 
 			$('#x_content').html(loading);
 			$('#x_content').load('forms/student.html',function() {
@@ -68,7 +68,7 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 				  data: {student_id: row.student_id}
 				}).then(function mySucces(response) {
 					
-					angular.copy(response.data, scope.student);
+					angular.copy(response.data, scope.student_info);
 					
 				}, function myError(response) {
 					 
@@ -93,10 +93,10 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 			$http({
 			  method: 'POST',
 			  url: 'handlers/student-save.php',
-			  data: {student: scope.student}
+			  data: {student_info: scope.student_info}
 			}).then(function mySucces(response) {					
 				
-				if (scope.student.student_id == 0) scope.student.student_id = response.data;
+				if (scope.student_info.student_id == 0) scope.student_info.student_id = response.data;
 				
 				$timeout(function() { self.list(scope); },200);
 				
@@ -139,14 +139,14 @@ angular.module('students-module',['bootstrap-modal']).factory('form', function($
 			
 			// load list
 			
-			scope.student = {};
-			scope.student.student_id = 0;			
+			scope.student_info = {};
+			scope.student_info.student_id = 0;			
 			$http({
 			  method: 'POST',
 			  url: 'handlers/student-list.php',
 			}).then(function mySucces(response) {
 				
-				scope.students = response.data;
+				scope.student_infos = response.data;
 				
 			}, function myError(response) {
 				 
