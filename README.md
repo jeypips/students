@@ -1,2 +1,6 @@
-# esocio
-E-Socio Economic Profiling in La Union
+# Students
+# Practice
+Angularjs
+-Add
+-Edit
+-Delete
