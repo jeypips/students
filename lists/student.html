@@ -1,0 +1,33 @@
+<div class="panel panel-border panel-primary">
+<div class="panel-heading">
+	<button class="btn btn-primary waves-effect waves-light pull-right" ng-click="form.student(this)">Add</button>
+</div>
+<br><hr>
+	<div class="panel-body">
+		<table id="student" class="table table-striped m-0">
+		  <thead>
+			<tr>
+			  <th>#</th>
+			  <th>Name</th>
+			  <th>Address</th>
+			  <th>Contact No.</th>
+			  <th>Grade</th>
+			  <th>&nbsp;</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="student_info in student_infos">
+			  <td>{{student_info.student_id}}</td>
+			  <td>{{student_info.student_firstname}} {{student_info.student_middlename}} {{student_info.student_lastname}}</td>
+			  <td>{{student_info.student_address}}</td>
+			  <td>{{student_info.student_contact}}</td>
+			  <td>{{student_info.student_grade}}</td>
+			  <td>
+			  <button class="btn btn-sm btn-default" style="margin-right: 5px;" ng-click="form.student(this,student_info)"><i class="fa fa-search" style="cursor: pointer;"></i></button>
+			  <button class="btn btn-sm btn-default" ng-click="form.delete(this,student_info)"><i class="fa fa-close" style="cursor: pointer;"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
